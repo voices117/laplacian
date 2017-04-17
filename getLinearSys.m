@@ -2,7 +2,7 @@ function [A, b] = getLinearSys(h, w)
   % Builds the linear system for the Laplacian equation with Dirichlet conditions with the given
   % width (w) and height (h).
 
-  t_top = (85782 + 93837 + 90904 + 95772) / (4 * 10^3);
+  t_top = round((85782 + 93837 + 90904 + 95772) / (4 * 10^3));
   t_bot = 50;
   t_lat = 50;
 
