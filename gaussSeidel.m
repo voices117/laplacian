@@ -23,7 +23,7 @@ function x = gaussSeidel(A, b, x0, tolerance, max_iterations)
         end
 
         % calculates the error
-        err = max(abs(x_prev - x));
+        err = norm(x_prev - x);
         x_prev = x;
         iter += 1;
     end

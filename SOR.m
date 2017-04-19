@@ -1,4 +1,4 @@
-function x = gaussSeidel(A, b, w, x0, tolerance, max_iterations)
+function x = SOR(A, b, w, x0, tolerance, max_iterations)
     % Solves a linear system `Ax=b` for x using the SOR method, using `x0` as the starting value
     % for the solution until the error goes under `tolerance` or `max_iterations` are reached.
     % `w` is the relaxation factor to be used.
@@ -24,7 +24,7 @@ function x = gaussSeidel(A, b, w, x0, tolerance, max_iterations)
         end
 
         % calculates the error
-        err = max(abs(x_prev - x));
+        err = norm(x_prev - x);
         x_prev = x;
         iter += 1;
     end

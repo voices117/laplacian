@@ -24,7 +24,7 @@ function x = jacobi(A, b, x0, tolerance, max_iterations)
 
 
         % calculates the error
-        err = max(abs(x_old - x_new));
+        err = norm(x_old - x_new);
         x_old = x_new;
         iter += 1;
     end
